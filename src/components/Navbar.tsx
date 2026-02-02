@@ -135,16 +135,41 @@ export default function Navbar() {
                     </a>
 
                     {/* Desktop Links */}
-                    <div className="hidden md:flex items-center gap-10">
-                        <ul className="flex items-center gap-10">
+                    <div className="hidden md:flex items-center gap-12">
+                        <ul className="flex items-center gap-4">
                             {navLinks.map((link) => (
                                 <li key={link.name}>
                                     <a
                                         href={link.href}
                                         onClick={(e) => handleScroll(e, link.href)}
-                                        className={`text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:text-accent ${activeSection === link.id ? "text-accent" : "text-foreground/60"}`}
+                                        onMouseMove={(e) => {
+                                            const rect = e.currentTarget.getBoundingClientRect();
+                                            const x = e.clientX - rect.left - rect.width / 2;
+                                            const y = e.clientY - rect.top - rect.height / 2;
+                                            gsap.to(e.currentTarget, {
+                                                x: x * 0.3,
+                                                y: y * 0.3,
+                                                duration: 0.4,
+                                                ease: "power2.out"
+                                            });
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            gsap.to(e.currentTarget, {
+                                                x: 0,
+                                                y: 0,
+                                                duration: 0.6,
+                                                ease: "elastic.out(1, 0.3)"
+                                            });
+                                        }}
+                                        className={`relative px-6 py-3 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 hover:text-accent rounded-full ${activeSection === link.id ? "text-accent" : "text-foreground/60"}`}
                                     >
-                                        {link.name}
+                                        <span className="relative z-10">{link.name}</span>
+                                        {activeSection === link.id && (
+                                            <span
+                                                className="absolute inset-0 bg-accent/10 rounded-full z-0"
+                                                style={{ transition: 'all 0.3s ease' }}
+                                            />
+                                        )}
                                     </a>
                                 </li>
                             ))}

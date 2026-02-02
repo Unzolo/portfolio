@@ -12,7 +12,7 @@ const experiences = [
         role: "Frontend Developer",
         company: "The Marble Jar",
         period: "2024 Oct - Present",
-        desc: "Leading the development of scalable cloud architectures and mentoring junior developers. Implemented micro-frontend architecture which increased deployment speed by 40%.",
+        desc: "Developing high-performance, accessible web applications using React and TypeScript. Crafting seamless user experiences with modern design principles and responsive layouts.",
     },
     {
         role: "Full Stack Developer",
@@ -38,14 +38,13 @@ export default function Experience() {
             gsap.from(item, {
                 scrollTrigger: {
                     trigger: item,
-                    start: "top 80%",
-                    toggleActions: "play none none none",
+                    start: "top 90%",
+                    toggleActions: "play reverse play reverse",
                 },
                 opacity: 0,
-                x: -50,
+                y: 100,
                 duration: 1,
                 ease: "power3.out",
-                clearProps: "all"
             });
         });
     }, { scope: container });

@@ -98,7 +98,7 @@ export default function Projects() {
     return (
         <section id="projects" ref={container} className="section-container">
             <h2 className="text-4xl md:text-5xl mb-16 text-right">
-                Selected <span className="text-gradient">Experience</span>
+                Curated <span className="text-gradient">Works</span>
             </h2>
 
             <div className="flex flex-col gap-24 md:gap-32">
