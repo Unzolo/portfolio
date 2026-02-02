@@ -12,6 +12,9 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Muhammed Rafeeq | Creative Developer Portfolio",
   description: "Senior Full Stack Developer specializing in modern web experiences.",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 import { ThemeProvider } from "@/components/ThemeProvider";

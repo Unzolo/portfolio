@@ -58,7 +58,7 @@ export default function Experience() {
 
             <div className="relative pl-8 md:pl-12">
                 {/* Vertical Line */}
-                <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-accent via-accent-secondary to-transparent" />
+                <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-linear-to-b from-accent via-accent-secondary to-transparent" />
 
                 {experiences.map((exp, index) => (
                     <div
@@ -73,12 +73,12 @@ export default function Experience() {
                                 <h3 className="text-2xl font-bold">{exp.role}</h3>
                                 <p className="text-accent font-medium text-lg">{exp.company}</p>
                             </div>
-                            <span className="glass px-4 py-2 text-sm text-[var(--text-muted)]">
+                            <span className="glass px-4 py-2 text-sm text-(--text-muted)">
                                 {exp.period}
                             </span>
                         </div>
 
-                        <p className="text-[var(--text-muted)] max-w-3xl text-lg leading-relaxed">
+                        <p className="text-(--text-muted) max-w-3xl text-lg leading-relaxed">
                             {exp.desc}
                         </p>
                     </div>

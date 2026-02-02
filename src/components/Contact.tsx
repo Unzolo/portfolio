@@ -49,7 +49,7 @@ export default function Contact() {
 
                 <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 mb-16">
                     <a
-                        href="https://wa.me/919495393457?text=Hi%20Muhammed,%20I%20saw%20your%20portfolio..."
+                        href="https://wa.me/917994028594?text=Hi%20Muhammed,%20I%20saw%20your%20portfolio..."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-3 px-8 py-4 rounded-full bg-[#25D366] text-white font-bold hover:opacity-90 transition-opacity"
@@ -76,7 +76,7 @@ export default function Contact() {
                 </div>
 
                 <div className="max-w-2xl mx-auto">
-                    <div className="glass p-8 md:p-12 rounded-[1.5rem] text-left">
+                    <div className="glass p-8 md:p-12 rounded-3xl text-left">
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
@@ -88,6 +88,7 @@ export default function Contact() {
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                         className="glass w-full px-6 py-4 rounded-2xl outline-none focus:border-accent transition-colors"
+                                        suppressHydrationWarning
                                     />
                                 </div>
                                 <div className="space-y-2">
@@ -99,6 +100,7 @@ export default function Contact() {
                                         value={formData.email}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                         className="glass w-full px-6 py-4 rounded-2xl outline-none focus:border-accent transition-colors"
+                                        suppressHydrationWarning
                                     />
                                 </div>
                             </div>
@@ -111,6 +113,7 @@ export default function Contact() {
                                     value={formData.message}
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                     className="glass w-full px-6 py-4 rounded-2xl outline-none focus:border-accent transition-colors resize-none"
+                                    suppressHydrationWarning
                                 />
                             </div>
 
@@ -118,6 +121,7 @@ export default function Contact() {
                                 type="submit"
                                 disabled={status === "sending"}
                                 className="w-full bg-accent hover:bg-opacity-90 text-black font-black py-5 rounded-2xl flex items-center justify-center gap-3 transition-all active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest text-sm"
+                                suppressHydrationWarning
                             >
                                 {status === "sending" ? (
                                     "Sending Message..."

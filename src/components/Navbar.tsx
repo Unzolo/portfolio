@@ -169,7 +169,7 @@ export default function Navbar() {
             <div
                 ref={menuRef}
                 style={{ clipPath: "circle(0% at 90% 10%)" }}
-                className="fixed inset-0 z-[999] bg-background flex flex-col items-center justify-center md:hidden"
+                className="fixed inset-0 z-999 bg-background flex flex-col items-center justify-center md:hidden"
             >
                 <div className="absolute top-0 left-0 w-full h-full bg-accent/5 blur-[120px] rounded-full translate-y-1/2 -z-10" />
 
@@ -187,7 +187,7 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                
+
             </div>
         </>
     );

@@ -44,9 +44,9 @@ const ProjectImage = ({ src, title }: { src: string, title: string }) => {
 
     if (hasError || !src) {
         return (
-            <div className="w-full aspect-[16/10] flex items-center justify-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl group-hover:border-accent/30 transition-colors duration-500">
+            <div className="w-full aspect-16/10 flex items-center justify-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl group-hover:border-accent/30 transition-colors duration-500">
                 <div className="text-center p-8">
-                    <div className="w-16 h-1 w-full bg-accent/20 mx-auto mb-6 rounded-full overflow-hidden">
+                    <div className="w-16 h-1 bg-accent/20 mx-auto mb-6 rounded-full overflow-hidden">
                         <div className="h-full bg-accent w-1/3 animate-[slide_2s_infinite]" />
                     </div>
                     <h3 className="text-3xl font-black opacity-20 uppercase tracking-tighter mb-2 select-none group-hover:opacity-40 transition-opacity">
@@ -112,7 +112,7 @@ export default function Projects() {
                             <ProjectImage src={project.image} title={project.title} />
 
                             {/* Overlay for aesthetic depth */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                            <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                         </div>
 
                         <div className="flex-1 w-full">

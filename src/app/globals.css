@@ -78,11 +78,11 @@
   }
 
   .cursor {
-    @apply w-5 h-5 bg-foreground rounded-full fixed pointer-events-none z-[9999] mix-blend-difference transition-transform duration-150 ease-out;
+    @apply w-5 h-5 bg-foreground rounded-full fixed pointer-events-none z-9999 mix-blend-difference transition-transform duration-150 ease-out;
   }
 
   .cursor-follower {
-    @apply w-10 h-10 border border-foreground rounded-full fixed pointer-events-none z-[9998] opacity-50 transition-transform duration-200 ease-out;
+    @apply w-10 h-10 border border-foreground rounded-full fixed pointer-events-none z-9998 opacity-50 transition-transform duration-200 ease-out;
   }
 }
 
